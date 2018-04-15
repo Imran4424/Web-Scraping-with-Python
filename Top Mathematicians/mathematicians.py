@@ -46,8 +46,8 @@ def get_names():
                 if len(name) > 0:
                     names.add(name.strip())
                             
-        return list(names)
+        #return list(names)
+        print(names)
 
-#namelist = set()
-namelist = get_names()
-print(namelist)
+
+get_names()
