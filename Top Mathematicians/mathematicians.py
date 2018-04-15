@@ -1,5 +1,4 @@
-import request
-import requests
+from requests import get
 import bs4
 from contextlib import closing
 
