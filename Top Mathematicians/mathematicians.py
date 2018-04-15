@@ -10,21 +10,23 @@ def simple_get(url):
     if the content type response is some kind of HTML/XML, return the text context otherwise none 
     '''
 
-    with closing(get(url, stream=True)) as resp:
-            if is_good_response(resp):
-                return resp.content
-            else:
-                return None
+    resp = get(url, stream=True)
+
+    if is_good_response(resp):
+        return resp.content
+    else:
+        return None
 
 
-    def is_good_response(resp):
-        """
+def is_good_response(resp):
+    """
     Returns true if the response seems to be HTML, false otherwise
     """
+
     content_type = resp.headers['Content-Type'].lower()
     return (resp.status_code == 200
             and content_type is not None
-            and content_type.find('html') > -1)
+            and content_type.find("html") > -1)
 
 
 def get_names():
