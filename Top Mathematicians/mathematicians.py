@@ -45,7 +45,7 @@ def get_names():
         #return list(names)
         #print(names)
 
-        for i, li in enumerate(html.select('li')):   #here li is a tag name, so must be li
+        for i, li in enumerate(html.select("li")):   #here li is a tag name, so must be li
             print(i+1, li.text)
 
 
