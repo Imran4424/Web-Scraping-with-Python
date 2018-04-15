@@ -10,3 +10,5 @@ except AttributeError as e:
 else:
     if badContent == None:
         print("tag was not found")
+    else:
+        print(badContent)
