@@ -42,8 +42,8 @@ def get_names():
             for name in li.text.split("\n"):
                 if len(name) > 0:
                     names.add(name.strip())
-        #return list(names)
-        print(names)
+        return list(names)
+        #print(names)
 
         # here li is a tag name, so must be li
 
