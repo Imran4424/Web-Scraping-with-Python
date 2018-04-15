@@ -45,8 +45,8 @@ def get_names():
         #return list(names)
         #print(names)
 
-        for i, li in enumerate(html.select('li')):
-            print(i, li.text)
+        for i, imran in enumerate(html.select('imran')):
+            print(i+1, imran.text)
 
 
 get_names()
