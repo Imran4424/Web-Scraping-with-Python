@@ -39,7 +39,7 @@ def get_names():
         html = BeautifulSoup(response, "html.parser")
         names = set()
         for li in html.select("li"):
-            for name in li.text.split('\n'):
+            for name in li.text.split("\n"):
                 if len(name) > 0:
                     names.add(name.strip())
         #return list(names)
