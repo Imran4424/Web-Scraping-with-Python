@@ -9,3 +9,6 @@ except HTTPError as e:
     print(e)
     # exception generated
 
+else:
+    None
+    #program continues
