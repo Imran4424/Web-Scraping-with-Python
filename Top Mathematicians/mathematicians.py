@@ -3,15 +3,6 @@ from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
 
-def is_good_response(resp):
-    '''
-    Return True if the response seems to be HTML, false otherwise
-    '''
-
-    content_type = resp.headers["content_type"].lower() 
-    
-    return (resp.status_code == 200 and content_type is not None and content_type.find("html"))
-
 
 def simple_get(url):
     '''
@@ -25,6 +16,23 @@ def simple_get(url):
             else:
                 return None
 
+''' def is_good_response(resp):
+    '''
+    #Return True if the response seems to be HTML, false otherwise
+    '''
+
+    content_type = resp.headers["content_type"].lower() 
+    
+    return (resp.status_code == 200 and content_type is not None and content_type.find("html")) '''
+
+    def is_good_response(resp):
+        """
+    Returns true if the response seems to be HTML, false otherwise
+    """
+    content_type = resp.headers['Content-Type'].lower()
+    return (resp.status_code == 200
+            and content_type is not None
+            and content_type.find('html') > -1)
 
 
 def get_names():
