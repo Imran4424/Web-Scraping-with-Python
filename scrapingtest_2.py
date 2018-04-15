@@ -7,6 +7,6 @@ try:
 
 except HTTPError as e:
     print(e)
-    #exception generated
+    # exception generated
 else:
-    #program continues
+    # program continues
