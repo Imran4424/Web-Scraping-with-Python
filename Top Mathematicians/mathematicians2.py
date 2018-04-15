@@ -28,7 +28,7 @@ def simple_get(url):
     if the content type response is some kind of HTML/XML, return the text context otherwise none 
     '''
 
-    resp = requests.get(url, stream=True)
+    resp = get(url, stream=True)
 
     if is_good_response(resp):
         return resp.content
