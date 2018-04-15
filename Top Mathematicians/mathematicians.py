@@ -1,6 +1,7 @@
 from requests import get
-import bs4
+from requests.exceptions import RequestException
 from contextlib import closing
+from bs4 import BeautifulSoup
 
 def is_good_response(resp):
     '''
