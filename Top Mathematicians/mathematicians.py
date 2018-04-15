@@ -37,7 +37,7 @@ def get_names():
     response = simple_get(url)
 
     if response is not None:
-        html = bs4.BeautifulSoup(response,"html.parser")
+        html = BeautifulSoup(response,"html.parser")
 
         names = set()
 
