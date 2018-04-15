@@ -10,5 +10,8 @@ def simple_get(url):
 
     resp = requests.get(url,stream= True)
 
-    
+    if is_good_response(resp):
+        return resp.content
+    else:
+        return None
 
