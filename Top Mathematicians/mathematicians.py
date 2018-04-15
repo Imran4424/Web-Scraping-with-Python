@@ -48,3 +48,9 @@ def get_names():
                 
             
         return list(names)
+
+
+
+namelist = set()
+namelist = get_names()
+print
