@@ -7,3 +7,6 @@ def getTitle(url):
         html = urlopen(url)
     except HTTPError as e:
         return None
+
+    try:
+        bsObj = BeautifulSoup(html.read(),"lxml")
