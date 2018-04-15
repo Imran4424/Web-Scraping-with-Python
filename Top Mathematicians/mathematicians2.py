@@ -49,3 +49,5 @@ def get_names():
 
 
 mathema = get_names()
+
+print(mathema)
