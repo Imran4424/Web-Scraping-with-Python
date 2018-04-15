@@ -34,4 +34,7 @@ def get_names():
 
     url = "http://www.fabpedigree.com/james/mathmen.htm"
 
-    
+    response = simple_get(url)
+
+    if response is not None:
+        html = bs4.BeautifulSoup(response,"html.parser")
