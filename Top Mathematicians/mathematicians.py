@@ -38,9 +38,7 @@ def get_names():
 
     if response is not None:
         html = BeautifulSoup(response,"html.parser")
-
         names = set()
-
         for line in html.select("line"):
             for name in line.text.split("\n"):
                 if len(name) > 0:
