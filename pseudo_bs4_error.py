@@ -1,2 +1,2 @@
 try:
-    badContent = bsObj.nonE
+    badContent = bsObj.nonExistingTag.anotherTag
