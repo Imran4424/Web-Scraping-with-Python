@@ -37,13 +37,12 @@ def get_names():
     response = simple_get(url)
 
     if response is not None:
-        html = BeautifulSoup(response,"html.parser")
+        html = BeautifulSoup(response, 'html.parser')
         names = set()
-        for line in html.select("line"):
-            for name in line.text.split("\n"):
+        for li in html.select('li'):
+            for name in li.text.split('\n'):
                 if len(name) > 0:
                     names.add(name.strip())
-                            
         #return list(names)
         print(names)
 
