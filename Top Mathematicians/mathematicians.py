@@ -42,7 +42,7 @@ def get_names():
         names = set()
 
         for line in html.select("line"):
-            for name in line.text.split("\n")
+            for name in line.text.split("\n"):
                 if len(name) > 0:
                     names.add(name.strip())
                 
