@@ -38,3 +38,7 @@ def get_names():
 
     if response is not None:
         html = bs4.BeautifulSoup(response,"html.parser")
+
+        names = set()
+
+        
