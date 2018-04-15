@@ -18,5 +18,7 @@ def simple_get(url):
 
 
 def is_good_response(resp):
-    
+    '''
+    Return True if the response seems to be HTML, false otherwise
+    '''
     
