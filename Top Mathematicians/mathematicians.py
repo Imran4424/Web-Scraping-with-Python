@@ -32,7 +32,8 @@ def get_names():
     downloads the the page where list of mathematicians is found and return a list of strings, one per mathematician
     '''
 
-    url = 'http://www.fabpedigree.com/james/mathmen.htm'
-    
+    url = "http://www.fabpedigree.com/james/mathmen.htm"
+
+
 
     
