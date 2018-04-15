@@ -4,7 +4,7 @@ from contextlib import closing
 from bs4 import BeautifulSoup
 
 
-def simple_get(url):
+''' def simple_get(url):
     """
     Attempts to get the content at `url` by making an HTTP GET request.
     If the content-type of response is some kind of HTML/XML, return the
@@ -19,6 +19,20 @@ def simple_get(url):
 
     except RequestException as e:
         log_error('Error during requests to {0} : {1}'.format(url, str(e)))
+        return None '''
+
+
+def simple_get(url):
+    '''
+    attempts to get the content at "url" by making a http request.
+    if the content type response is some kind of HTML/XML, return the text context otherwise none 
+    '''
+
+    resp = requests.get(url, stream=True)
+
+    if is_good_response(resp):
+        return resp.content
+    else:
         return None
 
 
