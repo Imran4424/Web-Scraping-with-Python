@@ -9,7 +9,7 @@ except HTTPError as e:
     print(e)
     # exception generated
 except URLError as e:
-    print("The server could not be found "+ str(e))
+    print("The server could not be found \n"+ str(e))
 
 else:
     print("It worked out well")
