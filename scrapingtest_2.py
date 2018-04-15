@@ -8,6 +8,8 @@ try:
 except HTTPError as e:
     print(e)
     # exception generated
+except URLError as e:
+    print("The server could not be found " + e)
 
 else:
     None
