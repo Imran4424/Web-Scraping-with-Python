@@ -1,5 +1,4 @@
 from requests import get
-from contextlib import closing
 from bs4 import BeautifulSoup
 
 
