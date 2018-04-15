@@ -13,3 +13,8 @@ def getTitle(url):
         title = bsObj.body.h1
     except AttributeError as e:
         return None
+    
+    return title
+
+
+title = getTitle("http://pythonscraping.com/pages/page1.html")
