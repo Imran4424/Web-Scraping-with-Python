@@ -43,7 +43,10 @@ def get_names():
                 if len(name) > 0:
                     names.add(name.strip())
         #return list(names)
-        print(names)
+        #print(names)
+
+        for i, li in enumerate(html.select('li')):
+            print(i, li.text)
 
 
 get_names()
