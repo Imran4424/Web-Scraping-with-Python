@@ -10,3 +10,4 @@ def getTitle(url):
 
     try:
         bsObj = BeautifulSoup(html.read(),"lxml")
+        title = bsObj.body.h1
