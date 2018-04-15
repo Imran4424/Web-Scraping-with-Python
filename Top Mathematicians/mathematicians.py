@@ -45,12 +45,9 @@ def get_names():
             for name in line.text.split("\n"):
                 if len(name) > 0:
                     names.add(name.strip())
-                
-            
+                            
         return list(names)
-
-
 
 namelist = set()
 namelist = get_names()
-print
+print(namelist)
