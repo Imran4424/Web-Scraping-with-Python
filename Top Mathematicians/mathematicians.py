@@ -47,4 +47,4 @@ def get_names():
                     names.add(name.strip())
                 
             
-        return list|()
+        return list(names)
