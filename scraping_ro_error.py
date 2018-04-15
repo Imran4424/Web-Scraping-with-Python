@@ -1,1 +1,1 @@
-from urllib.request 
+from urllib.request import urlopen
