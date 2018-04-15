@@ -21,4 +21,8 @@ def is_good_response(resp):
     '''
     Return True if the response seems to be HTML, false otherwise
     '''
+
+    content_type = resp.headers['Content-Type'].lower() 
+    
+    return ()
     
