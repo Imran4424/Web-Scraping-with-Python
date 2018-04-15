@@ -37,9 +37,9 @@ def get_names():
     response = simple_get(url)
 
     if response is not None:
-        html = BeautifulSoup(response, 'html.parser')
+        html = BeautifulSoup(response, "html.parser")
         names = set()
-        for li in html.select('li'):
+        for li in html.select("li"):
             for name in li.text.split('\n'):
                 if len(name) > 0:
                     names.add(name.strip())
