@@ -48,4 +48,4 @@ def get_names():
         # here li is a tag name, so must be li
 
 
-get_names()
+mathema = get_names()
