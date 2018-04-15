@@ -12,5 +12,5 @@ except URLError as e:
     print("The server could not be found " + e)
 
 else:
-    None
+    print("It worked out well")
     #program continues
