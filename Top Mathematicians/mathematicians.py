@@ -34,6 +34,4 @@ def get_names():
 
     url = "http://www.fabpedigree.com/james/mathmen.htm"
 
-
-
     
