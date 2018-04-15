@@ -37,17 +37,15 @@ def get_names():
 
     if response is not None:
         html = BeautifulSoup(response, "html.parser")
-        #names = set()
-        #for li in html.select("li"):
-        #for name in li.text.split("\n"):
-        #if len(name) > 0:
-        #names.add(name.strip())
+        names = set()
+        for li in html.select("li"):
+            for name in li.text.split("\n"):
+                if len(name) > 0:
+                    names.add(name.strip())
         #return list(names)
-        #print(names)
+        print(names)
 
         # here li is a tag name, so must be li
-        for i, li in enumerate(html.select("li")):
-            print(i+1, li.text)
 
 
 get_names()
