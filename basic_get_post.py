@@ -1,11 +1,26 @@
 import requests
-import bs4
+from bs4 import BeautifulSoup
 
-url = "http://www.educationboardresults.gov.bd/"
+session = requests.session()
+form_page = session.get('http://www.educationboardresults.gov.bd')
+form = BeautifulSoup(form_page.content, 'lxml')
 
-res1 = requests.get(url)
-soup1 = bs4.BeautifulSoup(res1.content, "lxml")
-x1 = soup1.find_all()
-x1.attrs
+captcha = eval(form.form.table.table.find_all('tr')
+               [6].find_all('td')[1].get_text())
+data = dict(sr=3, et=0, exam='ssc', year='2011', board="comilla",
+            roll="166507", reg="871100", value_s=captcha)
+result_page = session.post(
+    'http://www.educationboardresults.gov.bd/result.php', data=data)
+result = BeautifulSoup(result_page.content, 'lxml')
+res = result.find('table', class_="black12").find_all('td')
 
-print(x1)
+information = {}
+isKey = False
+for item in res:
+    if isKey:
+        information[key] = item.get_text()
+    else:
+        key = item.get_text()
+    isKey = not isKey
+
+print(information)
