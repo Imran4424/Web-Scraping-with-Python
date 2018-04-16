@@ -35,4 +35,4 @@ for item in res:
         key = item.get_text()
     iskey = not iskey
 
-print(information)
+#print(information)
