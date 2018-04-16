@@ -17,3 +17,5 @@ data = dict(sr=3,et=0,exam="ssc",year="2012",board = "dinajpur",roll="138272",re
 result_url = "http://www.educationboardresults.gov.bd/result.php"
 
 result_page = session.post(result_url,data = data)
+
+result = BeautifulSoup(result_page.content,"lxml")
