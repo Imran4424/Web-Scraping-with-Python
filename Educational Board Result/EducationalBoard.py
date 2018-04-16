@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-session = requests.session();
+session = requests.session()
 
 url = "http://www.educationboardresults.gov.bd"
 
@@ -19,3 +19,5 @@ result_url = "http://www.educationboardresults.gov.bd/result.php"
 result_page = session.post(result_url,data = data)
 
 result = BeautifulSoup(result_page.content,"lxml")
+
+res = result.find("table",class_ = "black12").find_all("td")
