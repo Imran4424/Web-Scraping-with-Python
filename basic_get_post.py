@@ -1,9 +1,10 @@
 import requests
 import bs4
 
-res1 = requests.get("https://en.wikipedia.org/wiki/List_of_districts_of_Bangladesh")
+url = "http://www.educationboardresults.gov.bd/"
 
-soup1 = bs4.BeautifulSoup(res1.content,"lxml")
-
-for i, li in enumerate(soup1.select("li")):
-    print(i+1,li.text)
+res1 = requests.get(url)
+soup1 = bs4.BeautifulSoup(res1.content, 'lxml')
+x1 = soup1.find('input', {'name': 'clear_search'})
+x1.attrs
+x1['value']
