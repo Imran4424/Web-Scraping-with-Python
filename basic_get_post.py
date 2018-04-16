@@ -5,5 +5,5 @@ res1 = requests.get("https://en.wikipedia.org/wiki/List_of_districts_of_Banglade
 
 soup1 = bs4.BeautifulSoup(res1.content,"lxml")
 
-for i, li in enumerate(lxml.select("li")):
-    
+for i, li in enumerate(soup1.select("li")):
+    print(i+1,li.text)
