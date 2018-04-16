@@ -13,3 +13,4 @@ capcha = eval(form.form.table.table.find_all("tr")[6].find_all("td")[1].get_text
 
 
 data = dict(sr=3,et=0,exam="ssc",year="2012",board = "dinajpur",roll="138272",reg = "750336",value_s = capcha)
+
