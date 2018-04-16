@@ -23,7 +23,4 @@ for item in res:
         key = item.get_text()
     isKey = not isKey
 
-#print(information)
-
-for i, li in enumerate(html.select("li")):  # here li is a tag name, so must be li
-            print(i+1, li.text)
+print(information)
