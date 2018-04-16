@@ -21,3 +21,18 @@ result_page = session.post(result_url,data = data)
 result = BeautifulSoup(result_page.content,"lxml")
 
 res = result.find("table",class_ = "black12").find_all("td")
+
+information = {}
+
+iskey = False
+
+key = "0"
+
+for item in res:
+    if iskey:
+        information[key] = item.get_text()
+    else:
+        key = item.get_text()
+    iskey = not iskey
+
+print(information)
