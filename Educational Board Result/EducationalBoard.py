@@ -38,4 +38,4 @@ for item in res:
 #print(information)
 
 for keys in information:
-    print(keys,information[keys])
+    print(keys,information[keys],sep = " : ")
