@@ -36,3 +36,6 @@ for item in res:
     iskey = not iskey
 
 #print(information)
+
+for keys in information:
+    print(keys,information[keys])
